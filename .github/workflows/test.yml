@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  
+jobs:
+  test:
+    runs-on: '12-arm64-${{github.run_id}}-${{github.run_attempt}}'
+    steps:
+      - run: echo Test
